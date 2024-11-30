@@ -9,7 +9,11 @@ jobs:
     steps:
       - name: Assign label
         run: |
+          echo "First output"
           issue_title="${{ github.event.issue.title }}"
+          echo "Second output"
+          echo $issue_title
+          echo "Third output"
           if [[ "$issue_title" == "*"bug"* ]]; then
             echo "Issue is about a bug!"
           else
