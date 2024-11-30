@@ -1,4 +1,4 @@
-name: Label Issues ( Script Injection Example)
+name: Label Issues ( Script Injection Fix Example)
 on:
   issues:
     types:
@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Assign label
         env:
-          TITLE: "${{ github.event.issue.title }}"
+          TITLE: ${{ github.event.issue.title }}
         run: |
           echo "First output"
           issue_title=$TITLE
