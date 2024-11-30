@@ -14,7 +14,7 @@ jobs:
           echo "Second output"
           echo $issue_title
           echo "Third output"
-          if [[ "$issue_title" == "*"bug"* ]]; then
+          if [[ "$issue_title" == *"bug"* ]]; then
             echo "Issue is about a bug!"
           else
             echo "Issue is not about a bug"
